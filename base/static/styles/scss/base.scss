@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// Configs
+
+$font-family-1: Arial, sans-serif;
+$font-family-2: Montserrat, Arial, sans-serif;
+
+$color-1: #ffffff;
+$color-2: #dedede;
+$color-3: #e7e7e7;
+$color-4: #999999;
+$color-5: #777777;
+$color-6: #333333;
+$color-7: #222222;
+$color-8: #000000;
+
+body {
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: $color-1;
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    padding: 15px 0px;
+    border-bottom: 1px solid $color-3;
+    font-family: $font-family-2;
+
+    .navbar-brand {
+        height: 100px;
+        padding: 0
+    }
+
+    .navbar-nav {
+        float: right;
+    }
+}
+
+.link-menu {
+    padding: 2px 2px;
+    font-size: 17px;
+    font-weight: 400;
+    display: block;
+    text-transform: uppercase;
+}
