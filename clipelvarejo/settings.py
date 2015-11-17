@@ -80,9 +80,10 @@ WSGI_APPLICATION = 'clipelvarejo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'mysql.clipelvarejo.com.br',
         'NAME': 'clipelvarejo',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'clipelvarejo',
+        'PASSWORD': 'FWNU9NyCRwwjXAF7',
     }
 }
 
