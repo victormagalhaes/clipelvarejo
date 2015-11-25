@@ -61,4 +61,11 @@ header {
 
 #about {
     background-color: $color-5;
+
+    .star-light {
+        &:after {
+            background-color: $color-5;
+            content: "\f007";
+        }
+    }
 }

@@ -31,3 +31,6 @@ header {
 
 #about {
   background-color: #00B297; }
+  #about .star-light:after {
+    background-color: #00B297;
+    content: "\f007"; }
