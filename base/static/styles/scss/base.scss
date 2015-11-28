@@ -7,6 +7,10 @@ $color-3: #B23705;
 $color-4: #0DFFD9;
 $color-5: #00B297;
 
+.img-responsive, .thumbnail > img, .thumbnail a > img {
+    outline: 1px solid #dedede;
+}
+
 .navbar-default {
     background-color: $color-1;
 
@@ -51,6 +55,7 @@ header {
         padding: 15px;
         background-color: transparent;
         border: 15px dashed $color-4;
+        outline: 0;
 
         @media (max-width: 768px) {
             border-width: 7px;
@@ -64,6 +69,10 @@ header {
         .thumbnail {
             padding: 0;
             border: 0;
+
+            img {
+                outline: 1px solid #dedede;
+            }
         }
     }
 }

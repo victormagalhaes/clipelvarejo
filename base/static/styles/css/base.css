@@ -1,3 +1,6 @@
+.img-responsive, .thumbnail > img, .thumbnail a > img {
+  outline: 1px solid #dedede; }
+
 .navbar-default {
   background-color: #FF6526; }
   .navbar-default .navbar-brand .fa-paperclip {
@@ -21,7 +24,8 @@
 header .thumbnail {
   padding: 15px;
   background-color: transparent;
-  border: 15px dashed #0DFFD9; }
+  border: 15px dashed #0DFFD9;
+  outline: 0; }
   @media (max-width: 768px) {
     header .thumbnail {
       border-width: 7px;
@@ -32,6 +36,8 @@ header .secundary-featured {
   header .secundary-featured .thumbnail {
     padding: 0;
     border: 0; }
+    header .secundary-featured .thumbnail img {
+      outline: 1px solid #dedede; }
 
 .star-primary::after {
   content: "\f0c6" !important; }
