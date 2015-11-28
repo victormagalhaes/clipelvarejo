@@ -1,7 +1,10 @@
 .navbar-default {
   background-color: #FF6526; }
   .navbar-default .navbar-brand .fa-paperclip {
-    margin-right: 20px; }
+    margin-right: 10px; }
+  .navbar-default .navbar-brand small {
+    color: #B23705;
+    font-size: 0.6em; }
   .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
     color: #B23705; }
   .navbar-default .navbar-toggle {
@@ -15,16 +18,20 @@
     color: #fff;
     opacity: 0.8; }
 
-header {
-  background: url(url() repeat-x 0 0 #00B297; }
-  header .thumbnail {
-    padding: 15px;
-    background-color: transparent;
-    border: 15px dashed #00B297; }
-    @media (max-width: 768px) {
-      header .thumbnail {
-        border-width: 7px;
-        padding: 7px; } }
+header .thumbnail {
+  padding: 15px;
+  background-color: transparent;
+  border: 15px dashed #0DFFD9; }
+  @media (max-width: 768px) {
+    header .thumbnail {
+      border-width: 7px;
+      padding: 7px; } }
+
+header .secundary-featured {
+  margin-top: 40px; }
+  header .secundary-featured .thumbnail {
+    padding: 0;
+    border: 0; }
 
 .star-primary::after {
   content: "\f0c6" !important; }
@@ -34,3 +41,7 @@ header {
   #about .star-light:after {
     background-color: #00B297;
     content: "\f007"; }
+
+@media (max-width: 768px) {
+  #map-of-clipel {
+    height: 200px; } }

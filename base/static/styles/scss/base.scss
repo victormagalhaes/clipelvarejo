@@ -12,7 +12,12 @@ $color-5: #00B297;
 
     .navbar-brand {
         .fa-paperclip {
-            margin-right: 20px;
+            margin-right: 10px;
+        }
+
+        small {
+            color: $color-3;
+            font-size: 0.6em;
         }
 
         &:hover, &:focus {
@@ -42,15 +47,23 @@ $color-5: #00B297;
 }
 
 header {
-    background: url() repeat-x 0 0 $color-5;
     .thumbnail {
         padding: 15px;
         background-color: transparent;
-        border: 15px dashed $color-5;
+        border: 15px dashed $color-4;
 
         @media (max-width: 768px) {
             border-width: 7px;
             padding: 7px;
+        }
+    }
+
+    .secundary-featured {
+        margin-top: 40px;
+
+        .thumbnail {
+            padding: 0;
+            border: 0;
         }
     }
 }
@@ -67,5 +80,11 @@ header {
             background-color: $color-5;
             content: "\f007";
         }
+    }
+}
+
+#map-of-clipel {
+    @media (max-width: 768px) {
+        height: 200px;
     }
 }
