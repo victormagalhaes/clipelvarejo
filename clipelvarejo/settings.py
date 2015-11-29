@@ -88,15 +88,7 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'localhost',
-        'NAME': 'clipelvarejo',
-        'USER': 'root',
-        'PASSWORD': '',
-    }
-}
+
 
 
 # Internationalization
