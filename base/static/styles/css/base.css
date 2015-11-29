@@ -23,13 +23,26 @@
 
 header .thumbnail {
   padding: 15px;
-  background-color: transparent;
-  border: 15px dashed #0DFFD9;
-  outline: 0; }
+  outline: 0;
+  border: 2px solid #dedede; }
   @media (max-width: 768px) {
     header .thumbnail {
-      border-width: 7px;
-      padding: 7px; } }
+      padding: 7px;
+      border-width: 1px; } }
+
+header .skills {
+  color: #0d6654; }
+
+header h3 {
+  font-size: 1.4em; }
+  @media (max-width: 768px) {
+    header h3 {
+      font-size: 1.1em; } }
+
+header p {
+  color: #0d6654;
+  font-size: 1.1em;
+  line-height: 1.1em; }
 
 header .secundary-featured {
   margin-top: 40px; }

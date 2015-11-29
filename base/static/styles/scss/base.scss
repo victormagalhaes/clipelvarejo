@@ -6,6 +6,7 @@ $color-3: #B23705;
 // Bleen
 $color-4: #0DFFD9;
 $color-5: #00B297;
+$color-6: #0d6654;
 
 .img-responsive, .thumbnail > img, .thumbnail a > img {
     outline: 1px solid #dedede;
@@ -53,14 +54,31 @@ $color-5: #00B297;
 header {
     .thumbnail {
         padding: 15px;
-        background-color: transparent;
-        border: 15px dashed $color-4;
         outline: 0;
+        border: 2px solid #dedede;
 
         @media (max-width: 768px) {
-            border-width: 7px;
             padding: 7px;
+            border-width: 1px;
         }
+    }
+
+    .skills {
+        color: $color-6;
+    }
+
+    h3 {
+        font-size: 1.4em;
+
+        @media (max-width: 768px) {
+            font-size: 1.1em;
+        }
+    }
+
+    p {
+        color: $color-6;
+        font-size: 1.1em;
+        line-height: 1.1em;
     }
 
     .secundary-featured {

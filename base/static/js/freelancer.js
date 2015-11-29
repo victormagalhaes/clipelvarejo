@@ -13,6 +13,14 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    // Scroll the page to the contact section
+    $('.budget').click(function() {
+        $('#bs-example-navbar-collapse-1 > ul > li.page-scroll:nth-child(5) > a').click();
+        setTimeout(function() {
+            $('.navbar-toggle:visible').click();
+        }, 1500);
+    });
 });
 
 // Floating label headings for the contact form
