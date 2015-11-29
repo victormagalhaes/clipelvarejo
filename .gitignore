@@ -61,3 +61,7 @@ target/
 
 # Node
 node_modules/
+
+media/
+
+.idea/

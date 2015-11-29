@@ -8,126 +8,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-1" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
+
+            {% for produto in produtos %}
+                <div class="col-sm-3 col-xs-4 product-item">
+                    <a href="#product-modal-{{ produto.id }}" class="product-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
                         </div>
-                    </div>
-                    <img src="{% static 'img/product/boneca.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-2" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/grampeador.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-3" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/princesas.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-4" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/mochila-batman.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-5" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/fantasia-minnie.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-6" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/relogios-noel.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-7" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/agenda-2016.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-8" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/capa-celular.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-9" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/canetas.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-10" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/organizador-papel.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-11" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/caixa-presente.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-4 product-item">
-                <a href="#product-modal-12" class="product-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/product/apontador.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
+                        <img src="{{ produto.imagem_full.url }}" class="img-responsive" alt="{{ produto.titulo }}">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

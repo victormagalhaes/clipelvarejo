@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive thumbnail" src="{% static 'img/volta-as-aulas.jpg' %}" alt="Volta as aulas!">
+                <img class="img-responsive thumbnail" src="{{ destaque_principal.imagem_full.url }}" alt="{{ destaque_principal.titulo }}">
                 <div class="intro-text">
-                    <span class="name">Volta as aulas!</span>
-                    <span class="skills">Aqui na Clipel Varejo, você encontrará descontos de até 20% em listas escolares! Venha nos visitar!</span>
+                    <span class="name">{{ destaque_principal.titulo }}</span>
+                    <span class="skills">{{ destaque_principal.subtitulo }}</span>
                 </div>
             </div>
         </div>
@@ -14,17 +14,17 @@
         <div class="row secundary-featured">
             <div class="col-lg-5 col-xs-6 col-lg-offset-1 text-center">
                 <div class="thumbnail">
-                    <img src="{% static 'img/presentes-de-natal.jpg' %}" alt="Natal cheio de presentes! Ho ho ho!">
+                    <img src="{{ destaque_secundario_um.imagem_full.url }}" alt="{{ destaque_secundario_um.titulo }}">
                 </div>
-                <h3>Natal cheio de presentes! Ho ho ho!</h3>
-                <p>Nessa época maravilhosa encontre presentes para a família toda! Venha conhecer!</p>
+                <h3>{{ destaque_secundario_um.titulo }}</h3>
+                <p>{{ destaque_secundario_um.subtitulo }}</p>
             </div>
             <div class="col-lg-5 col-xs-6 text-center">
                 <div class="thumbnail">
-                    <img src="{% static 'img/facebook-whatsapp.jpg' %}" alt="Aceitamos pedidos pelo whatsapp e pelo facebook também!">
+                    <img src="{{ destaque_secundario_dois.imagem_full.url }}" alt="{{ destaque_secundario_dois.titulo }}">
                 </div>
-                <h3>Peça pelo whatsapp ou facebook também!</h3>
-                <p>Entre em contato conosco pelo número 99999-8888!</p>
+                <h3>{{ destaque_secundario_dois.titulo }}</h3>
+                <p>{{ destaque_secundario_dois.subtitulo }}</p>
             </div>
         </div>
     </div>

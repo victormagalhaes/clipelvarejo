@@ -8,72 +8,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Xerox</h4>
+            {% for servico in servicos %}
+                <div class="col-sm-4 col-xs-6 portfolio-item">
+                    <a href="#portfolio-modal-{{ servico.id }}" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                                <h4 class="visible-lg-block"> {{ servico.titulo }}</h4>
+                            </div>
                         </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/xerox.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Encadernação</h4>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/encadernacao.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-3" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Plastificação</h4>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/plastificacao.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-4" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Listas escolares</h4>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/lista-escolar.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-5" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Caixas para presentes</h4>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/caixas-para-presentes.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
-            <div class="col-sm-4 col-xs-6 portfolio-item">
-                <a href="#portfolio-modal-6" class="portfolio-link" data-toggle="modal">
-                    <div class="caption">
-                        <div class="caption-content">
-                            <i class="fa fa-search-plus fa-3x"></i>
-                            <h4 class="visible-lg-block">Ampliação de documentos</h4>
-                        </div>
-                    </div>
-                    <img src="{% static 'img/portfolio/ampliacao.jpg' %}" class="img-responsive" alt="">
-                </a>
-            </div>
+                        <img src=" {{ servico.imagem_full.url }}" class="img-responsive" alt="">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
