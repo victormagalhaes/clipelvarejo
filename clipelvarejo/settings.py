@@ -84,12 +84,9 @@ DATABASES = {
         'HOST': 'mysql.clipelvarejo.com.br',
         'NAME': 'clipelvarejo',
         'USER': 'clipelvarejo',
-        'PASSWORD': 'FWNU9NyCRwwjXAF7',
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
     }
 }
-
-
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -112,6 +109,13 @@ MEDIA_URL = '/media/'
 
 IMAGE_UPLOAD_DESTAQUE = "%s/destaque" % MEDIA_ROOT
 IMAGE_UPLOAD_SERVICOS = "%s/servicos" % MEDIA_ROOT
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'clipelvarejo@clipelvarejo.com.br'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')
+EMAIL_HOST = 'smtp.clipelvarejo.com.br'
+EMAIL_PORT = 587
 
 
 ENV = os.environ.get('AMBIENTE', '')
