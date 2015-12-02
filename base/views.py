@@ -31,12 +31,14 @@ def home(request):
 def mail(request):
 	data = request.POST
 
-	if data:
-		email = Email(data)
-		email.send_email()
-
 	result = {
 		'success': True
 	}
+
+	if data:
+		email = Email(data)
+		email.send_email()
+	else:
+		result['success'] = False
 
 	return HttpResponse(json.dumps(result), content_type='application/json')
