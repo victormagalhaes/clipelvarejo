@@ -117,6 +117,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')
 EMAIL_HOST = 'smtp.clipelvarejo.com.br'
 EMAIL_PORT = 587
 
+EMAIL_ADDRESS = 'clipelvarejo@clipelvarejo.com.br'
 
 ENV = os.environ.get('AMBIENTE', '')
 

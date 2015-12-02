@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.conf import settings
 from django.core.mail import EmailMessage
 
 
@@ -16,7 +17,9 @@ class Email(object):
 	def send_email(self):
 
 		try:
-			email = EmailMessage(subject=self.subject, body=self._format_message(), from_email=self.email, to=self.to)
+			email = EmailMessage(
+				subject=self.subject, body=self._format_message(), from_email=settings.EMAIL_ADDRESS, to=self.to
+			)
 			email.send(fail_silently=False)
 		except Exception, e:
 			raise e
@@ -25,8 +28,10 @@ class Email(object):
 
 		contact = "<div>Contato: %s - %s</div>" % (self.name, self.phone)
 
+		mail = "<div>Email: %s</div>" % self.email
+
 		message = "<div>%s</div>" % self.message
 
-		formatted_message = "<html>%s%s</html>" % (contact, message)
+		formatted_message = "<html>%s%s%s</html>" % (contact, mail, message)
 
 		return formatted_message
