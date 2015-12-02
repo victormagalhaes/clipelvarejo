@@ -1,4 +1,4 @@
-from django.core.serializers import json
+import json
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -32,13 +32,13 @@ def mail(request):
 	data = request.POST
 
 	result = {
-		'success': True
+		'success': 'true'
 	}
 
 	if data:
 		email = Email(data)
 		email.send_email()
 	else:
-		result['success'] = False
+		result['success'] = 'false'
 
 	return HttpResponse(json.dumps(result), content_type='application/json')

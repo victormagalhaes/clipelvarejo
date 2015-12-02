@@ -20,6 +20,7 @@ class Email(object):
 			email = EmailMessage(
 				subject=self.subject, body=self._format_message(), from_email=settings.EMAIL_ADDRESS, to=self.to
 			)
+			email.content_subtype = 'html'
 			email.send(fail_silently=False)
 		except Exception, e:
 			raise e
