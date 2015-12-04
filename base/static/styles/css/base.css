@@ -98,6 +98,12 @@ section h2 {
     section h2 {
       font-size: 2.2em; } }
 
+.product-modal .modal-content h2, .portfolio-modal .modal-content h2 {
+  font-size: 3em; }
+  @media (max-width: 768px) {
+    .product-modal .modal-content h2, .portfolio-modal .modal-content h2 {
+      font-size: 1.8em; } }
+
 .star-primary::after {
   content: "\f0c6" !important; }
 
@@ -110,3 +116,6 @@ section h2 {
 @media (max-width: 768px) {
   #map-of-clipel {
     height: 200px; } }
+
+#contactForm {
+  margin-top: 20px; }

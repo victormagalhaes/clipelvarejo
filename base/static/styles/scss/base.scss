@@ -157,6 +157,18 @@ section {
     }
 }
 
+.product-modal, .portfolio-modal {
+    .modal-content {
+        h2 {
+            font-size: 3em;
+
+            @media (max-width: 768px) {
+                font-size: 1.8em;
+            }
+        }
+    }
+}
+
 .star-primary::after {
     content: "\f0c6" !important;
 }
@@ -176,4 +188,8 @@ section {
     @media (max-width: 768px) {
         height: 200px;
     }
+}
+
+#contactForm {
+    margin-top: 20px;
 }
