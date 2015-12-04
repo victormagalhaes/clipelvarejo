@@ -30,6 +30,12 @@
     color: #fff;
     opacity: 0.8; }
 
+header .container {
+  padding-top: 150px; }
+  @media (max-width: 768px) {
+    header .container {
+      padding-top: 80px; } }
+
 header .thumbnail {
   padding: 15px;
   outline: 0;

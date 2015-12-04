@@ -63,6 +63,14 @@ $color-6: #0d6654;
 }
 
 header {
+    .container {
+        padding-top: 150px;
+
+        @media (max-width: 768px) {
+            padding-top: 80px;
+        }
+    }
+
     .thumbnail {
         padding: 15px;
         outline: 0;
