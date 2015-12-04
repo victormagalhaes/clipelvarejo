@@ -16,6 +16,17 @@ $color-6: #0d6654;
     background-color: $color-1;
 
     .navbar-brand {
+        padding: 0;
+        @media (max-width: 768px) {
+            padding: 10px;
+        }
+
+        img {
+            display: inline-block;
+            height: 100%;
+            margin-right: 20px;
+        }
+
         .fa-paperclip {
             margin-right: 10px;
         }

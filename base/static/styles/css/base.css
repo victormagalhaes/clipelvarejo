@@ -3,13 +3,22 @@
 
 .navbar-default {
   background-color: #FF6526; }
-  .navbar-default .navbar-brand .fa-paperclip {
-    margin-right: 10px; }
-  .navbar-default .navbar-brand small {
-    color: #B23705;
-    font-size: 0.6em; }
-  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #B23705; }
+  .navbar-default .navbar-brand {
+    padding: 0; }
+    @media (max-width: 768px) {
+      .navbar-default .navbar-brand {
+        padding: 10px; } }
+    .navbar-default .navbar-brand img {
+      display: inline-block;
+      height: 100%;
+      margin-right: 20px; }
+    .navbar-default .navbar-brand .fa-paperclip {
+      margin-right: 10px; }
+    .navbar-default .navbar-brand small {
+      color: #B23705;
+      font-size: 0.6em; }
+    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+      color: #B23705; }
   .navbar-default .navbar-toggle {
     border-color: #B23705; }
     .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +9,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#page-top"><span class="fa fa-paperclip"></span>Clipel Varejo <small class="hidden-xs">Papelaria e presentes</small></a>
+            <a class="navbar-brand" href="#page-top"><img src="{% static 'img/clipel-logo.png' %}"><small class="hidden-xs">Papelaria e presentes</small></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
