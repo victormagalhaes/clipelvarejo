@@ -20,13 +20,6 @@ class DestaquePrincipal(Destaque):
 	imagem_thumb = ImageSpecField(
 		source='imagem', processors=[ResizeToFill(365, 200)], format='JPEG', options={'quality': 100}
 	)
-	is_principal = models.BooleanField(default=False, verbose_name='É destaque principal')
-
-	def save(self, *args, **kwargs):
-		if self.is_principal:
-			DestaquePrincipal.objects.all().update(is_principal=False)
-
-		super(DestaquePrincipal, self).save(*args, **kwargs)
 
 	class Meta:
 		verbose_name = 'Destaque Principal'

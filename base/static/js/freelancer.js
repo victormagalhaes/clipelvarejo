@@ -34,6 +34,13 @@ $(function() {
     });
 });
 
+$(function() {
+    $('#main-carousel').on('slid.bs.carousel' ,function() {
+        var indice = $('.carousel-inner').find('.active').index();
+        $('.intro-text').removeClass('active').eq(indice).addClass('active');
+    });
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'

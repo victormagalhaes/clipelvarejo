@@ -3,10 +3,32 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive thumbnail" src="{{ destaque_principal.imagem_full.url }}" alt="{{ destaque_principal.titulo }}">
-                <div class="intro-text">
-                    <span class="name">{{ destaque_principal.titulo }}</span>
-                    <span class="skills">{{ destaque_principal.subtitulo }}</span>
+                <div id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        {% for destaque_principal in destaques_principais %}
+                            <div class="item {% if forloop.counter == 1 %}active{% endif %}">
+                                <img class="img-responsive thumbnail" src="{{ destaque_principal.imagem_full.url }}" alt="{{ destaque_principal.titulo }}">
+                            </div>
+                        {% endfor %}
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+                            <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+                            <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    {% for destaque_principal in destaques_principais %}
+                        <div class="intro-text {% if forloop.counter == 1 %}active{% endif %}" data-index="{{ forloop.counter0 }}">
+                            <span class="name">{{ destaque_principal.titulo }}</span>
+                            <span class="skills">{{ destaque_principal.subtitulo }}</span>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

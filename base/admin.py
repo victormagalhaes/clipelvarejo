@@ -4,7 +4,7 @@ from base import models
 # Register your models here.
 
 class DestaquePrincipalAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'subtitulo', 'is_principal', 'admin_thumbnail')
+    list_display = ('titulo', 'subtitulo', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
 class DestaqueSecundarioAdmin(admin.ModelAdmin):
