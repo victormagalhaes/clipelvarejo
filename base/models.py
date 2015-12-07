@@ -8,6 +8,7 @@ from imagekit.processors import ResizeToFill
 class Destaque(models.Model):
 	titulo = models.CharField(max_length=100)
 	subtitulo = models.CharField(max_length=100)
+	link = models.CharField(max_length=200, default='')
 	imagem = models.ImageField(upload_to=settings.IMAGE_UPLOAD_DESTAQUE)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
@@ -52,7 +53,6 @@ class DestaqueSecundario(Destaque):
 
 class EntidadeExibicao(models.Model):
 	titulo = models.CharField(max_length=100)
-	preco = models.DecimalField(max_digits=7, decimal_places=2)
 	descricao = models.TextField()
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
@@ -72,7 +72,6 @@ class Servico(EntidadeExibicao):
 
 
 class Produto(EntidadeExibicao):
-
 	imagem_full = ImageSpecField(
 		source='imagem', processors=[ResizeToFill(700, 700)], format='JPEG', options={'quality': 100}
 	)

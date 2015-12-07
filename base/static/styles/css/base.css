@@ -62,7 +62,8 @@ header .intro-text {
     color: #0d6654; }
 
 header h3 {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  color: #fff; }
   @media (max-width: 768px) {
     header h3 {
       font-size: 1.1em; } }

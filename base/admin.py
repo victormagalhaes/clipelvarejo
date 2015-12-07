@@ -4,19 +4,19 @@ from base import models
 # Register your models here.
 
 class DestaquePrincipalAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'subtitulo', 'admin_thumbnail')
+    list_display = ('titulo', 'subtitulo', 'link', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
 class DestaqueSecundarioAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'subtitulo', 'ativo', 'admin_thumbnail')
+    list_display = ('titulo', 'subtitulo', 'link', 'ativo', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
 class ServicoAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'preco', 'descricao', 'admin_thumbnail')
+    list_display = ('titulo', 'descricao', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
 class ProdutoAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'preco', 'descricao', 'admin_thumbnail')
+    list_display = ('titulo', 'descricao', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
 admin.site.register(models.DestaquePrincipal, DestaquePrincipalAdmin)
