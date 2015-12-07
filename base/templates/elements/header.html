@@ -8,7 +8,9 @@
                     <div class="carousel-inner" role="listbox">
                         {% for destaque_principal in destaques_principais %}
                             <div class="item {% if forloop.counter == 1 %}active{% endif %}">
-                                <img class="img-responsive thumbnail" src="{{ destaque_principal.imagem_full.url }}" alt="{{ destaque_principal.titulo }}">
+                                <a href="{{ destaque_principal.link }}" alt="{{ destaque_principal.titulo }}">
+                                    <img class="img-responsive thumbnail" src="{{ destaque_principal.imagem_full.url }}" alt="{{ destaque_principal.titulo }}">
+                                </a>
                             </div>
                         {% endfor %}
 
@@ -35,18 +37,22 @@
 
         <div class="row secundary-featured">
             <div class="col-lg-5 col-xs-6 col-lg-offset-1 text-center">
-                <div class="thumbnail">
-                    <img src="{{ destaque_secundario_um.imagem_full.url }}" alt="{{ destaque_secundario_um.titulo }}">
-                </div>
-                <h3>{{ destaque_secundario_um.titulo }}</h3>
-                <p>{{ destaque_secundario_um.subtitulo }}</p>
+                <a href="#" alt="{{ destaque_secundario_um.link }}">
+                    <div class="thumbnail">
+                        <img src="{{ destaque_secundario_um.imagem_full.url }}" alt="{{ destaque_secundario_um.titulo }}">
+                    </div>
+                    <h3>{{ destaque_secundario_um.titulo }}</h3>
+                    <p>{{ destaque_secundario_um.subtitulo }}</p>
+                </a>
             </div>
             <div class="col-lg-5 col-xs-6 text-center">
-                <div class="thumbnail">
-                    <img src="{{ destaque_secundario_dois.imagem_full.url }}" alt="{{ destaque_secundario_dois.titulo }}">
-                </div>
-                <h3>{{ destaque_secundario_dois.titulo }}</h3>
-                <p>{{ destaque_secundario_dois.subtitulo }}</p>
+                <a href="#" alt="{{ destaque_secundario_dois.link }}">
+                    <div class="thumbnail">
+                        <img src="{{ destaque_secundario_dois.imagem_full.url }}" alt="{{ destaque_secundario_dois.titulo }}">
+                    </div>
+                    <h3>{{ destaque_secundario_dois.titulo }}</h3>
+                    <p>{{ destaque_secundario_dois.subtitulo }}</p>
+                </a>
             </div>
         </div>
     </div>
