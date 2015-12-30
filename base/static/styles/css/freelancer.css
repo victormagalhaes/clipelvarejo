@@ -317,6 +317,63 @@ section.success a.active {
     }
 }
 
+#papelarias .papelaria-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#papelarias .papelaria-item .papelaria-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#papelarias .papelaria-item .papelaria-link .caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(193, 64, 11, .9);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#papelarias .papelaria-item .papelaria-link .caption:hover {
+    opacity: 1;
+}
+
+#papelarias .papelaria-item .papelaria-link .caption .caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#papelarias .papelaria-item .papelaria-link .caption .caption-content i {
+    margin-top: -12px;
+}
+
+#papelarias .papelaria-item .papelaria-link .caption .caption-content h3,
+#papelarias .papelaria-item .papelaria-link .caption .caption-content h4 {
+    margin: 0;
+}
+
+#papelarias * {
+    z-index: 2;
+}
+
+@media(min-width:767px) {
+    #papelarias .papelaria-item {
+        margin: 0 0 30px;
+    }
+}
+
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
@@ -575,6 +632,70 @@ footer .footer-below {
 }
 
 .product-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.papelaria-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.papelaria-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.papelaria-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.papelaria-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.papelaria-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.papelaria-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.papelaria-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.papelaria-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.papelaria-modal .modal-backdrop {
     display: none;
     opacity: 0;
 }

@@ -19,7 +19,12 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'descricao', 'admin_thumbnail')
     admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
 
+class PapelariaAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'descricao', 'admin_thumbnail')
+    admin_thumbnail = AdminThumbnail(image_field='imagem_thumb')
+
 admin.site.register(models.DestaquePrincipal, DestaquePrincipalAdmin)
 admin.site.register(models.DestaqueSecundario, DestaqueSecundarioAdmin)
 admin.site.register(models.Servico, ServicoAdmin)
 admin.site.register(models.Produto, ProdutoAdmin)
+admin.site.register(models.Papelaria, PapelariaAdmin)

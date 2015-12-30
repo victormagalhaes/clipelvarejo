@@ -8,7 +8,7 @@ from imagekit.processors import ResizeToFill
 class Destaque(models.Model):
 	titulo = models.CharField(max_length=100)
 	subtitulo = models.CharField(max_length=100)
-	link = models.CharField(max_length=200, default='')
+	link = models.CharField(max_length=200, blank=True)
 	imagem = models.ImageField(upload_to=settings.IMAGE_UPLOAD_DESTAQUE)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
@@ -16,7 +16,7 @@ class Destaque(models.Model):
 
 class DestaquePrincipal(Destaque):
 	imagem_full = ImageSpecField(
-		source='imagem', processors=[ResizeToFill(1280, 700)], format='JPEG', options={'quality': 100}
+		source='imagem', processors=[ResizeToFill(1280, 400)], format='JPEG', options={'quality': 100}
 	)
 	imagem_thumb = ImageSpecField(
 		source='imagem', processors=[ResizeToFill(365, 200)], format='JPEG', options={'quality': 100}
@@ -83,3 +83,17 @@ class Produto(EntidadeExibicao):
 	class Meta:
 		verbose_name = 'Presente'
 		verbose_name_plural = 'Presentes'
+
+
+class Papelaria(EntidadeExibicao):
+	imagem_full = ImageSpecField(
+		source='imagem', processors=[ResizeToFill(700, 700)], format='JPEG', options={'quality': 100}
+	)
+
+	imagem_thumb = ImageSpecField(
+		source='imagem', processors=[ResizeToFill(263, 263)], format='JPEG', options={'quality': 100}
+	)
+
+	class Meta:
+		verbose_name = 'Papelaria'
+		verbose_name_plural = 'Papelaria'

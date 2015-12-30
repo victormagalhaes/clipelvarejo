@@ -1,23 +1,23 @@
 {% load staticfiles %}
-<section id="products">
+<section id="papelarias">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Presentes</h2>
+                <h2>Papelaria</h2>
                 <hr class="star-primary">
             </div>
         </div>
         <div class="row">
-            {% for produto in produtos %}
-                <div class="col-sm-3 col-xs-4 product-item">
-                    <a href="#product-modal-{{ produto.id }}" class="product-link" data-toggle="modal">
+            {% for papelaria in papelarias %}
+                <div class="col-sm-3 col-xs-4 papelaria-item">
+                    <a href="#papelaria-modal-{{ papelaria.id }}" class="papelaria-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
-                                <h4 class="visible-lg-block"> {{ produto.titulo }}</h4>
+                                <h4 class="visible-lg-block"> {{ papelaria.titulo }}</h4>
                             </div>
                         </div>
-                        <img src="{{ produto.imagem_full.url }}" class="img-responsive" alt="{{ produto.titulo }}">
+                        <img src=" {{ papelaria.imagem_full.url }}" class="img-responsive" alt="">
                     </a>
                 </div>
             {% endfor %}

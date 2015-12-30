@@ -16,7 +16,7 @@ $(function() {
 
     // Scroll the page to the contact section
     $('.budget').click(function() {
-        $('#bs-example-navbar-collapse-1 > ul > li.page-scroll:nth-child(5) > a').click();
+        $('#bs-example-navbar-collapse-1 > ul > li.page-scroll:nth-child(6) > a').click();
         setTimeout(function() {
             $('.navbar-toggle:visible').click();
         }, 1500);
