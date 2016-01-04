@@ -11,7 +11,7 @@ class Email(object):
 		self.name = data.get('name')
 		self.email = data.get('email')
 		self.is_contact = True if data.get('type') == 'contato' else False
-		self.to = ['clipelvarejo@clipelvarejo.com.br', ]
+		self.to = ['contato@clipelvarejo.com.br', ]
 
 	def send_email(self):
 
